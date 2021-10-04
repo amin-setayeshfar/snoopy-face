@@ -1,2 +1,20 @@
+<section class="video"></section>
 <video autoplay width="720" height="560"></video>
-<img src="/assets/images/glasses.png" alt="glasses" />
+<img
+  src="/assets/images/glasses.png"
+  alt="glasses"
+  [hidden]="!faceDetected"
+  [style.left.px]="glassesLeft"
+  [style.top.px]="glassesTop"
+  [style.width.px]="glassesWidth"
+/>
+<mat-spinner [hidden]="faceDetected"></mat-spinner>
+
+<section class="actions">
+  <button mat-raised-button color="primary" (click)="toggleFaceLandmarks()">
+    Toggle Face Landmarks
+  </button>
+  <button mat-raised-button color="primary" (click)="capture()">Capture</button>
+</section>
+<img [src]="screenshot" alt="" />
+<video id="s" autoplay width="720" height="560"></video>
