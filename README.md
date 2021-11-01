@@ -1,4 +1,4 @@
-# SNOOPY FACE B-)
+# SNOOPY FACE 😎
 
 This is a simple face recognition angular application to test the [FaceAPI](https://www.npmjs.com/package/@vladmandic/face-api) with the help of [TensorFlow.js](https://www.npmjs.com/package/@tensorflow/tfjs) which is an open-source hardware-accelerated JavaScript library for training and deploying machine learning models.
 
@@ -15,7 +15,7 @@ Any contributions to this repository are welcomed, there are also some issues al
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
 To start working on it or being able to run it on your machine you can follow [the official angular documents](https://angular.io/guide/setup-local)
 
-## Development server
+## Development Server
 
 To start this application, Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
