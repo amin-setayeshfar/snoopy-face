@@ -11,7 +11,7 @@ so I calculate the (almost) proper eyes locations in the camera live stream and 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
 To start working on it or being able to run it on your machine you can follow [the official angular documents](https://angular.io/guide/setup-local)
 
-If you have NPM and Angular CLI installed, then run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+If you have NPM and Angular CLI installed, then simply navigate to the application folder and run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Contribution Guide
 
