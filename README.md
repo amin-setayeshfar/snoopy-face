@@ -24,4 +24,4 @@ Feel free to contact me to discuss anything you might want to share related to t
 
 ## License
 
-This project is licensed under the MIT License - see the [License](https://github.com/amin-setayeshfar/snoopy-face/LICENSE) file for details
+This project is licensed under the MIT License - see the [License](https://github.com/amin-setayeshfar/snoopy-face/blob/master/LICENSE) file for details
