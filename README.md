@@ -19,6 +19,8 @@ There are no specific guidelines for contributing. Feel free to send a pull requ
 
 Any contributions to this repository are welcomed, there are also some issues already created that you can work on, or if you are not interested in them feel free to suggest any features or edits you think is cool
 
+P.S
+Feel free to contact me to discuss anything you might want to share related to this project in any way you prefer 🙂
 
 ## License
 
