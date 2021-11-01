@@ -14,7 +14,12 @@
   <button mat-raised-button color="primary" (click)="toggleFaceLandmarks()">
     Toggle Face Landmarks
   </button>
-  <button mat-raised-button color="primary" (click)="capture()">Capture</button>
+  <button mat-raised-button color="primary" (click)="toggleFaceExpressions()">
+    Toggle Face Expressions
+  </button>
+  <button mat-raised-button color="primary" (click)="toggleFaceDetections()">
+    Toggle Face Detections
+  </button>
+  <!-- TODO: make it work! -->
+  <!-- <button mat-raised-button color="primary" (click)="capture()">Capture</button> -->
 </section>
-<img [src]="screenshot" alt="" />
-<video id="s" autoplay width="720" height="560"></video>

@@ -8,13 +8,15 @@ declare var faceapi: any;
 })
 export class AppComponent {
   public video: any;
-  public glassesLeft: any;
-  public glassesTop: any;
+  public glassesLeft: number;
+  public glassesTop: number;
   public glassesWidth: number;
   public faceDetected: boolean = false;
   public drawFaceLandmarks: boolean = true;
-  screenshot: any;
-  //TODO: adding joint
+  public drawFaceExpressions: boolean = true;
+  public drawDetections: boolean = true;
+
+  //TODO: adding joint!
   // public showJoint: boolean = true;
 
   constructor(private changeDetaction: ChangeDetectorRef) {}
@@ -48,7 +50,6 @@ export class AppComponent {
       (stream: any) => {
         this.video.srcObject = stream;
         this.video.addEventListener('play', () => {
-          console.log('startet!');
           const canvas = faceapi.createCanvasFromMedia(this.video);
           document.body.append(canvas);
 
@@ -74,11 +75,15 @@ export class AppComponent {
                 detections,
                 displaySize
               );
-              faceapi.draw.drawDetections(canvas, resizedDetections);
+              if (this.drawDetections) {
+                faceapi.draw.drawDetections(canvas, resizedDetections);
+              }
               if (this.drawFaceLandmarks) {
                 faceapi.draw.drawFaceLandmarks(canvas, resizedDetections);
               }
-              faceapi.draw.drawFaceExpressions(canvas, resizedDetections);
+              if (this.drawFaceExpressions) {
+                faceapi.draw.drawFaceExpressions(canvas, resizedDetections);
+              }
               const landmarks = detections['landmarks'];
               const leftEye = landmarks.getLeftEye();
               const rightEye = landmarks.getRightEye();
@@ -102,45 +107,11 @@ export class AppComponent {
     this.drawFaceLandmarks = !this.drawFaceLandmarks;
   }
 
-  takeScreenshotStream() {
-    const width = screen.width * (window.devicePixelRatio || 1);
-    const height = screen.height * (window.devicePixelRatio || 1);
-
-    let stream;
-    const mediaStreamConstraints = {
-      audio: false,
-      video: {
-        width,
-        height,
-        frameRate: 1,
-      },
-    };
-
-    return (stream = (navigator.mediaDevices as any).getDisplayMedia(
-      mediaStreamConstraints
-    ));
+  toggleFaceExpressions() {
+    this.drawFaceExpressions = !this.drawFaceExpressions;
   }
 
-  async capture() {
-    const videoo = document.getElementsByTagName('video')[1];
-    const stream = await this.takeScreenshotStream();
-    const result = await new Promise((resolve, reject) => {
-      videoo.onloadedmetadata = () => {
-        // videoo.pause();
-        // videoo.play();
-        const canvas = document.createElement('canvas');
-        canvas.width = this.video.videoWidth;
-        canvas.height = this.video.videoHeight;
-        const context = canvas.getContext('2d');
-        context?.drawImage(
-          stream,
-          0,
-          0,
-          this.video.videoWidth,
-          this.video.videoHeight
-        );
-        this.screenshot = canvas.toDataURL();
-      };
-    });
+  toggleFaceDetections() {
+    this.drawDetections = !this.drawDetections;
   }
 }

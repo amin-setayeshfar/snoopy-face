@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "faceapi": {
+    "snoopyface": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,22 +23,15 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/faceapi",
+            "outputPath": "dist/snoopyface",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
-            "scripts": [
-              "./node_modules/face-api.js/dist/face-api.min.js"
-            ]
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
+            "scripts": ["./node_modules/face-api.js/dist/face-api.min.js"]
           },
           "configurations": {
             "production": {
@@ -77,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "faceapi:build:production"
+              "browserTarget": "snoopyface:build:production"
             },
             "development": {
-              "browserTarget": "faceapi:build:development"
+              "browserTarget": "snoopyface:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -88,7 +81,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "faceapi:build"
+            "browserTarget": "snoopyface:build"
           }
         },
         "test": {
@@ -99,13 +92,8 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         },
@@ -116,5 +104,5 @@
       }
     }
   },
-  "defaultProject": "faceapi"
+  "defaultProject": "snoopyface"
 }
