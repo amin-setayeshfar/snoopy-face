@@ -6,18 +6,19 @@ In this project I use a pre-trained FaceAPI model `mtcnn` which generously provi
 
 so I calculate the (almost) proper eyes locations in the camera live stream and add Snoop Dogg meme sunglasses to the face. by default, you can see the face area, face landmarks and impressions and you can toggle them to see only yourself in the famous glasses B-)
 
+## Running The Application
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
+To start working on it or being able to run it on your machine you can follow [the official angular documents](https://angular.io/guide/setup-local)
+
+If you have NPM and Angular CLI installed, then run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
 ## Contribution Guide
 
 There are no specific guidelines for contributing. Feel free to send a pull request if you have an improvement.
 
 Any contributions to this repository are welcomed, there are also some issues already created that you can work on, or if you are not interested in them feel free to suggest any features or edits you think is cool
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
-To start working on it or being able to run it on your machine you can follow [the official angular documents](https://angular.io/guide/setup-local)
-
-## Development Server
-
-To start this application, Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## License
 
